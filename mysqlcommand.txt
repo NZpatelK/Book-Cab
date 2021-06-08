@@ -1,0 +1,19 @@
+// Insert values always changing becuase all the values is base on user input.
+// $custDeatil[] are variable name and array. That array are store customer detail.
+
+INSERT INTO customer (name, phoneNo ,unitNum, streetNum, streetName, suburb, destSuburb, pickDate, pickTime, status) 
+VALUES ('$custDeatil[cname]','$custDeatil[phone]', '$custDeatil[unumber]', '$custDeatil[snumber]', '$custDeatil[stname]', '$custDeatil[sbname]', '$custDeatil[dsbname]', '$custDeatil[date]', '$custDeatil[time]', 'unassigned')";
+
+
+//This coding use the "$conn->insert_id"  That mean is same as "SELECT LAST_INSERT_ID()".
+$conn->insert_id 
+
+
+//$refNum is variable and it can changing the value depend on user input. 
+SELECT * FROM `customer`  WHERE `reference` = '{$refNum}'
+
+//$refNum is variable and it can changing the value depend on user assign on the specific reference number.
+UPDATE `customer` SET  status = 'assigned'  WHERE `reference` = '{$refNum}'
+
+//$date and $currentTime are variable and it changing teh value depend on current time and date. $twoHours is to add two hours from the current. E.g current time is 12:00 then add two hours to 14:00
+SELECT * FROM `customer` WHERE `status` = 'unassigned' AND `pickDate` = '{$date}' AND `pickTime` BETWEEN '{$currentTime}' AND '{$twoHours}'

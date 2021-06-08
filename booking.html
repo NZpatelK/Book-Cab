@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+Name: Karan Patel 
+Student ID: 15900950
+Paper Code: COMP721
+Paper Name: Web Development
+-->
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>CabsOnline</title>
+</head>
+
+<body>
+        <div class="displayForm" id="UpdateDisplay">
+                <form>
+                        <h1>Book a Cab</h1>
+
+                        <p>Name: <input type="text" name="cname" onkeydown="inputValidCheck('cname',cname.value, 'name')">
+                        <p id="cname" class="errorMsg"></p>                        
+                        </p>
+
+                        <p>Phone: <input type="text" name="phone" onkeydown="inputValidCheck('phone',phone.value,'phone')">
+                        <p id="phone" class="errorMsg"></p>
+                        </p>
+
+                        <p>Unit Number: <input type="text" name="unumber" onkeydown="inputValidCheck('unumber',unumber.value,'unit number')">
+                        <p id="unumber" class="errorMsg"></p>
+                        </p>
+
+                        <p>Street Number: <input type="text" name="snumber" onkeydown="inputValidCheck('snumber',snumber.value, 'street number')">
+                        <p id="snumber" class="errorMsg"></p>
+                        </p>
+
+                        <p>Street Name: <input type="text" name="stname"onkeydown="inputValidCheck('stname',stname.value, 'street name')">
+                        <p id="stname" class="errorMsg"></p>
+                        </p>
+
+                        <p>Suburb: <input type="text" name="sbname"></p>
+
+                        <p>Destination Suburb: <input type="text" name="dsbname"></p>
+
+                        <p>Pick-Up Date: <input type="date" name="date" id="currentDate" onchange="inputValidCheck('date',date.value, null)">
+                        <p id="date" class="errorMsg"></p>
+                        </p>
+                        
+                        <p>Pick-Up Time: <input type="time" name="time" id="currentTime" onchange="inputValidCheck('time',time.value, date.value)">
+                        <p id="time" class="errorMsg"></p>
+                        </p>
+
+                        <input class="formButton" type="button" value="Submit" name="submit" onClick="getData('booking.php','UpdateDisplay')">
+                        <input class="formButton" type="button" value="Reset" name="submit" onClick="getNewForm('UpdateDisplay')">
+                </form>
+
+                <a href="index.html" class="returnPage">Return to Home Page</a>
+
+        </div>
+        
+
+        <script type="text/javascript" src="booking.js"></script>
+</body>
+
+</html>

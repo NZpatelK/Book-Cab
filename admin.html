@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!--
+Name: Karan Patel 
+Student ID: 15900950
+Paper Code: COMP721
+Paper Name: Web Development
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin booking system</title>
+</head>
+
+<body>
+    <div class="displayForm">
+
+        <h1>Admin system</h1>
+
+        <div class="adminForm">
+            <form>
+                <p>Reference Number: <input type="text" name="bsearch" onkeydown="inputNumericValid(bsearch.value)">
+                <p id="errorMsg" class="errorMsg"></p>
+                </p>
+        
+                <div>
+                    <input class="formButton" type="button" value="Search" name="sbutton"
+                        onClick="getData('admin.php','content', bsearch.value, 'search')">
+                </div>
+            </form>
+        </div>
+
+        <a href="index.html" class="returnPage">Return to Home Page</a>
+
+        <hr>
+
+        <h2>Customer Information</h2>
+        <div id="content"></div>
+
+    </div>
+
+    <script type="text/javascript" src="admin.js"></script>
+</body>
+
+</html>
